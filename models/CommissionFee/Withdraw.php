@@ -3,7 +3,7 @@
 namespace app\models\CommissionFee;
 
 
-class Withdraw
+class Withdraw implements WithdrawInterface
 {
     const BUSINESS_USER_FEE_IN_PERCENT = 0.5;
     const PRIVATE_USER_FEE_IN_PERCENT = 0.3;

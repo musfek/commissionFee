@@ -4,7 +4,7 @@
 namespace app\models\CommissionFee;
 
 
-class Deposit
+class Deposit implements DepositInterface
 {
     const FEE_IN_PERCENT = '0.03';
 
