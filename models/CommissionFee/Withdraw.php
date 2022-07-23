@@ -1,6 +1,6 @@
 <?php
 
-namespace app\models\CommissionFree;
+namespace app\models\CommissionFee;
 
 
 class Withdraw
@@ -10,7 +10,7 @@ class Withdraw
     const PRIVATE_USER_MAX_FREE_AMOUNT_LIMIT_PER_WEEK = 1000;
     const PRIVATE_USER_MAX_FREE_OPERATION_LIMIT_PER_WEEK = 3;
 
-    public static $userWiseArray = [];
+    public static array $userWiseArray = [];
 
     public function calculate($amount, $userId, $userType, $currency, $date, $currencies)
     {

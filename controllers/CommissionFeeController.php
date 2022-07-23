@@ -3,9 +3,9 @@
 namespace app\controllers;
 
 
-use app\models\CommissionFree\CommissionFee;
-use app\models\CommissionFree\Currency;
-use app\models\CommissionFree\ReadFile;
+use app\models\CommissionFee\CommissionFee;
+use app\models\CommissionFee\Currency;
+use app\models\CommissionFee\ReadFile;
 use yii\web\Controller;
 
 class CommissionFeeController extends Controller

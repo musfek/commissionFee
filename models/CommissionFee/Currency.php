@@ -1,7 +1,7 @@
 <?php
 
 
-namespace app\models\CommissionFree;
+namespace app\models\CommissionFee;
 
 
 class Currency

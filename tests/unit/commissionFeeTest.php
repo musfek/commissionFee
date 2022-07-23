@@ -1,6 +1,6 @@
 <?php
 
-use app\models\CommissionFree\CommissionFee;
+use app\models\CommissionFee\CommissionFee;
 use Codeception\Test\Unit;
 
 class commissionFeeTest extends Unit
