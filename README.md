@@ -5,7 +5,7 @@
 
 Clone the project
 
-      git clone git@github.com:sharetripnet/musfek/commissionFee.git
+    git clone git@github.com:sharetripnet/musfek/commissionFee.git
       
 Run composer
 
@@ -32,29 +32,29 @@ PHP COMMAND FOR RUN THE UNIT TEST
 ####**APP'S SHORT DESCRIPTION**
 Main controller is provided below, where all requests are processed.
 
-       controllers/CommissionFeeController.php
+    controllers/CommissionFeeController.php
        
  This controller passes all requests to the model provided below, where all operations are calculated.
   
-        models/CommissionFee/CommissionFee.php
+    models/CommissionFee/CommissionFee.php
         
  This CommissionFee model has `calculate` function to calculate all operations by calling `operation` function which processes only one operation at a time. 
  
  Every operation has two types `deposit` and `withdraw`. Every type of operation is processed in the individual class provided below.
       
-        models/CommissionFee/Deposit.php
-        models/CommissionFee/Withdraw.php
+    models/CommissionFee/Deposit.php
+    models/CommissionFee/Withdraw.php
         
   To read different types of files like csv, xml, or json, there is a separate class provided below. 
   
-        models/CommissionFee/ReadFile.php
+    models/CommissionFee/ReadFile.php
         
    To get currency data and currency conversion, here is a separate class provided below.
            
-           models/CommissionFee/Currency.php
+    models/CommissionFee/Currency.php
            
   Test classes are to be found at the location provided below. 
        
-           tests/unit/CommissionFeeTest.php        
+    tests/unit/CommissionFeeTest.php        
      
           
