@@ -33,14 +33,14 @@ class Withdraw implements WithdrawInterface
         $amount = $currencyClass->calculate($currencies, $currency, $amount);
         $withdraw = new Withdraw();
         $userWiseArray = $withdraw->userWiseCalculation($amount, $userId, $date);
-        $chargeAbleAmount = $withdraw->calculateExceededAmount($amount,$userWiseArray[$userId]["weekWiseITotalAmount"]);
+        $chargeAbleAmount = $withdraw->calculateExceededAmount($amount, $userWiseArray[$userId]["weekWiseITotalAmount"]);
         if ($userWiseArray[$userId]["weekWiseITotalAmount"] <= self::PRIVATE_USER_MAX_FREE_AMOUNT_LIMIT_PER_WEEK && $userWiseArray[$userId]["operation"] <= self::PRIVATE_USER_MAX_FREE_OPERATION_LIMIT_PER_WEEK) {
             return 0;
         }
         return $chargeAbleAmount * self::PRIVATE_USER_FEE_IN_PERCENT / 100;
     }
 
-    private function calculateExceededAmount($amount,$weekWiseITotalAmount)
+    private function calculateExceededAmount($amount, $weekWiseITotalAmount)
     {
         if ($amount >= self::PRIVATE_USER_MAX_FREE_AMOUNT_LIMIT_PER_WEEK) {
             $amount = $weekWiseITotalAmount - self::PRIVATE_USER_MAX_FREE_AMOUNT_LIMIT_PER_WEEK;

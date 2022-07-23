@@ -10,10 +10,10 @@ class CommissionFee
     const OPERATION_TYPE_DEPOSIT = 'deposit';
     const OPERATION_TYPE_WITHDRAW = 'withdraw';
 
-    public function calculate($operations,$currencies)
+    public function calculate($operations, $currencies)
     {
         $commissionFees = [];
-        foreach ($operations as $key=>$operation) {
+        foreach ($operations as $key => $operation) {
             $commissionFees[] = self::commissionFeeFormat(self::operation($operation, $currencies));
         }
         return $commissionFees;
@@ -29,7 +29,7 @@ class CommissionFee
         $currency = $operation[5];
 
         if ($operationType == self::OPERATION_TYPE_DEPOSIT) {
-            $deposit= new Deposit();
+            $deposit = new Deposit();
             return $deposit->calculate($amount);
         } else if ($operationType == self::OPERATION_TYPE_WITHDRAW) {
             $withdraw = new Withdraw();

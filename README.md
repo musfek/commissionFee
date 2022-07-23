@@ -44,4 +44,17 @@ Main controller is provided below, where all requests are processed.
       
         models/CommissionFee/Deposit.php
         models/CommissionFee/Withdraw.php
+        
+  To read different types of files like csv, xml, or json, there is a separate class provided below. 
+  
+        models/CommissionFee/ReadFile.php
+        
+   To get currency data and currency conversion, here is a separate class provided below.
+           
+           models/CommissionFee/Currency.php
+           
+  Test classes are to be found at the location provided below. 
+       
+           tests/unit/CommissionFeeTest.php        
+     
           

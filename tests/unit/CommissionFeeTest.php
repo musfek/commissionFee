@@ -3,7 +3,7 @@
 use app\models\CommissionFee\CommissionFee;
 use Codeception\Test\Unit;
 
-class commissionFeeTest extends Unit
+class CommissionFeeTest extends Unit
 {
     /**
      * @var \UnitTester
